@@ -6,7 +6,8 @@ public class shell {
     String text;
     public void set_text(String text)
     {
-        this.text = text;
+        String print = "task print(a); give a; enclose;";
+        this.text = print + text;
     }
 
     public String get_result()

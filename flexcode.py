@@ -25,6 +25,7 @@ def run_code():
 
     gateway.entry_point.set_text(input_text)
     res = gateway.entry_point.get_result()
+    res = res.replace(",",'\n')
     text_output.insert("1.0", res)
     # if error:
     #     text_output.insert("1.0", error.as_string())
