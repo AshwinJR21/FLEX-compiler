@@ -67,70 +67,70 @@ class RTResult
 
 class Interpreter 
 {
-public RTResult visit(Node node, Context context){
+    public RTResult visit(Node node, Context context){
 
-    if(node instanceof NumberNode numberNode)
-    {
-        return visit_NumberNode(numberNode, context);
-    }
-    else if(node instanceof UnaryOpNode unaryOpNode)
-    {
-        return visit_UnaryOpNode(unaryOpNode, context);
-    }
-    else if(node instanceof BinOpNode binOpNode)
-    {
-        return visit_BinOpNode(binOpNode, context);
-    }
-    else if(node instanceof VarAssignNode varAssignNode)
-    {
-        return visit_VarAssignNode(varAssignNode, context);
-    }
-    else if(node instanceof VarAccessNode varAccessNode)
-    {
-        return visit_VarAccessNode(varAccessNode, context);
-    }
-    else if(node instanceof StringNode stringNode)
-    {
-        return visit_StringNode(stringNode, context);
-    }
-    else if(node instanceof ListNode listNode)
-    {
-        return visit_ListNode(listNode, context);
-    }
-    else if(node instanceof IfNode ifNode)
-    {
-        return visit_IfNode(ifNode, context);
-    }
-    else if(node instanceof ForNode forNode)
-    {
-        return visit_ForNode(forNode, context);
-    }
-    else if(node instanceof WhileNode whileNode)
-    {
-        return visit_WhileNode(whileNode, context);
-    }
-    else if(node instanceof FuncDefNode funcDefNode)
-    {
-        return visit_FuncDefNode(funcDefNode, context);
-    }
-    else if(node instanceof CallNode callNode)
-    {
-        return visit_CallNode(callNode, context);
-    }
-    else if(node instanceof ReturnNode returnNode)
-    {
-        return visit_ReturnNode(returnNode, context);
-    }
-    else if(node instanceof ContinueNode continueNode)
-    {
-        return visit_ContinueNode(continueNode, context);
-    }
-    else if(node instanceof BreakNode breakNode)
-    {
-        return visit_BreakNode(breakNode, context);
-    }
-    else 
-        return no_visit_method(node, context);
+        if(node instanceof NumberNode numberNode)
+        {
+            return visit_NumberNode(numberNode, context);
+        }
+        else if(node instanceof UnaryOpNode unaryOpNode)
+        {
+            return visit_UnaryOpNode(unaryOpNode, context);
+        }
+        else if(node instanceof BinOpNode binOpNode)
+        {
+            return visit_BinOpNode(binOpNode, context);
+        }
+        else if(node instanceof VarAssignNode varAssignNode)
+        {
+            return visit_VarAssignNode(varAssignNode, context);
+        }
+        else if(node instanceof VarAccessNode varAccessNode)
+        {
+            return visit_VarAccessNode(varAccessNode, context);
+        }
+        else if(node instanceof StringNode stringNode)
+        {
+            return visit_StringNode(stringNode, context);
+        }
+        else if(node instanceof ListNode listNode)
+        {
+            return visit_ListNode(listNode, context);
+        }
+        else if(node instanceof IfNode ifNode)
+        {
+            return visit_IfNode(ifNode, context);
+        }
+        else if(node instanceof ForNode forNode)
+        {
+            return visit_ForNode(forNode, context);
+        }
+        else if(node instanceof WhileNode whileNode)
+        {
+            return visit_WhileNode(whileNode, context);
+        }
+        else if(node instanceof FuncDefNode funcDefNode)
+        {
+            return visit_FuncDefNode(funcDefNode, context);
+        }
+        else if(node instanceof CallNode callNode)
+        {
+            return visit_CallNode(callNode, context);
+        }
+        else if(node instanceof ReturnNode returnNode)
+        {
+            return visit_ReturnNode(returnNode, context);
+        }
+        else if(node instanceof ContinueNode continueNode)
+        {
+            return visit_ContinueNode(continueNode, context);
+        }
+        else if(node instanceof BreakNode breakNode)
+        {
+            return visit_BreakNode(breakNode, context);
+        }
+        else 
+            return no_visit_method(node, context);
     }
 
     RTResult no_visit_method(Node node, Context context)
